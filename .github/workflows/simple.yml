@@ -5,6 +5,8 @@ on: [ push ]
 jobs:
   run-shell-command:
     runs-on: ubuntu-latest
+    env:
+      DEBUG: ${{secrets.ACTIONS_RUNNER_DEBUG}}
     steps:
       - name: echo a string
         run: echo "WAT"
