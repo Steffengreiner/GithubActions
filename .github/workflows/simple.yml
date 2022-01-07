@@ -4,7 +4,8 @@ on: [ push ]
 
 jobs:
   build:
-    environment: Debug
+    environment:
+      name: Debug
     runs-on: ubuntu-latest
     steps:
       - name: echo a string
