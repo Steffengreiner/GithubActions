@@ -3,7 +3,6 @@ name: Shell Commands
 on: [ push ]
 
 jobs:
-  run-shell-command:
   build:
     environment: Debug
     runs-on: ubuntu-latest
@@ -18,5 +17,3 @@ jobs:
         run: |
           node -v
           npm -v
-
-  
