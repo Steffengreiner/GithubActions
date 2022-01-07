@@ -4,13 +4,17 @@ on: [ push ]
 
 jobs:
   run-shell-command:
+  build:
+    environment: Debug
     runs-on: ubuntu-latest
-    env:
-      DEBUG: ${{secrets.ACTIONS_RUNNER_DEBUG}}
     steps:
       - name: echo a string
+        env:
+          DEBUG: ${{ secrets.ACTIONS_RUNNER_DEBUG }}
         run: echo "WAT"
       - name: multiline script
+        env:
+          DEBUG: ${{ secrets.ACTIONS_RUNNER_DEBUG }}
         run: |
           node -v
           npm -v
