@@ -9,11 +9,11 @@ jobs:
     steps:
       - name: echo a string
         env:
-          DEBUG: ${{ secrets.ACTIONS_RUNNER_DEBUG }}
-        run: echo "WAT"
+          DEBUG: ${{secrets.ACTIONS_RUNNER_DEBUG}}
+        run: echo ${{secrets.ACTIONS_RUNNER_DEBUG}}
       - name: multiline script
         env:
-          DEBUG: ${{ secrets.ACTIONS_RUNNER_DEBUG }}
+          DEBUG: ${{secrets.ACTIONS_RUNNER_DEBUG}}
         run: |
           node -v
           npm -v
